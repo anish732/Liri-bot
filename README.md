@@ -9,15 +9,24 @@
 
 #### Code:
 function spotifyThisSong(){
+
     //If user doesn't choose any song then it will display The sign.
     if(!userInput){
         userInput = "The Sign";
     }
+
  var spotify = new Spotify({
+
     id: process.env.SPOTIFY_ID,
+
   secret: process.env.SPOTIFY_SECRET
+
 });
-spotify.search({ type: 'track', query: userInput }, function(err, data) {
+
+spotify.search({ type: 'track', query: userInput },
+
+ function(err, data) {
+     
     if (err) {
       return console.log('Error occurred: ' + err);
     }
