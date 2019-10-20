@@ -24,7 +24,7 @@ switch(action){
         movieThis();
         break;
     case "concert-this":
-        concertThis();
+concertThis();
         break;
     case "do-what-it-says" :
         whatSays();
