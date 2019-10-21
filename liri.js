@@ -24,7 +24,7 @@ switch(action){
         movieThis();
         break;
     case "concert-this":
-concertThis();
+        concertThis();
         break;
     case "do-what-it-says" :
         whatSays();
@@ -49,11 +49,11 @@ axios.get(queryUrl).then(
       console.log("Title of the movie :" + response.data.Title);
       console.log("Release Year: " + response.data.Year);
       console.log("IMDB rating :" + response.data.imdbRating);
+      console.log("Rotton tomato rating: " + JSON.stringify(response.data.Ratings[1]));
       console.log("Country: " + response.data.Country);
       console.log("Language : " + response.data.Language);
       console.log("Plot : " + response.data.Plot);
       console.log("Actors :" + response.data.Actors);
-      console.log("Rotton tomato rating: " + JSON.stringify(response.data.Ratings[1]));
   })
   .catch(function(error){
       if (error.response){
@@ -87,6 +87,9 @@ function whatSays(){
     //Block of the code will read from random.text
     //The code will save the content of the reading in variable data.
     fs.readFile("random.text", "UTF8", function(err,data){
+        if (err){
+            console.log(error);
+        }
         console.log(data);
         //This will spint the data and give index number to each word.
         var splitData = data.split(",");
