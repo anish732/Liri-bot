@@ -41,7 +41,15 @@ spotify.search({ type: 'track', query: userInput },
 #### Bonus:
  ##### This function create log.txt file and add all search data in it.
 
-    fs.appendFile("log.txt", userInput , function(err){
+            fs.appendFile("log.txt", concertResult, function(err){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    console.log("Content added in log.txt!")
+                }
+            })
+
 
 
 #### Installation:

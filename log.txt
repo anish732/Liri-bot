@@ -1,1 +1,46 @@
-PupMr.NobodyA Beautiful MindSlayerjai ho
+"\n         Title of the movie:  A Beautiful Mind\n          Release Year:  2001\n          IMDB rating :  8.2,\n          Rotton tomato rating: {\"Source\":\"Rotten Tomatoes\",\"Value\":\"74%\"},\n          Country: : USA,\n          Language :   English,\n          Plot :   After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.,\n          Actors :  Russell Crowe, Ed Harris, Jennifer Connelly, Christopher Plummer\n        "
+         Title of the movie:  Mr. Nobody
+          Release Year:  2009
+          IMDB rating :  7.8,
+          Rotton tomato rating: {"Source":"Rotten Tomatoes","Value":"67%"},
+          Country: : Belgium, Germany, Canada, France, USA, UK,
+          Language :   English, Mohawk,
+          Plot :   A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.,
+          Actors :  Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+        
+         Title of the movie:  Mr. Nobody
+          Release Year:  2009
+          IMDB rating :  7.8,
+          Rotton tomato rating: {"Source":"Rotten Tomatoes","Value":"67%"},
+          Country: : Belgium, Germany, Canada, France, USA, UK,
+          Language :   English, Mohawk,
+          Plot :   A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.,
+          Actors :  Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+        
+         Title of the movie:  Matrix
+          Release Year:  1993–
+          IMDB rating :  7.8,
+          Rotton tomato rating: undefined,
+          Country: : Canada,
+          Language :   English,
+          Plot :   Steven Matrix is one of the underworld's foremost hitmen until his luck runs out, and someone puts a contract out on him. Shot in the forehead by a .22 pistol, Matrix "dies" and finds ...,
+          Actors :  Nick Mancuso, Phillip Jarrett, Carrie-Anne Moss, John Vernon
+        
+         Title of the movie:  Mr. Nobody
+          Release Year:  2009
+          IMDB rating :  7.8,
+          Rotton tomato rating: {"Source":"Rotten Tomatoes","Value":"67%"},
+          Country: : Belgium, Germany, Canada, France, USA, UK,
+          Language :   English, Mohawk,
+          Plot :   A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.,
+          Actors :  Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+        
+                Name of the venue is : Explore Asheville.com Arena,
+                Venue location : Asheville,
+                Date of the event is : 11/02/2019,
+              
+    Name of the Artist is :A.R. Rahman;
+    The song name: Jai Ho! (You Are My Destiny);
+    A preview link of the song from Spotify : https://open.spotify.com/track/7Kpqjspw4Y7HrvItIRcBiW;
+    The album from the song is from: Jai Ho! (You Are My Destiny);
+  

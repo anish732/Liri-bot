@@ -46,17 +46,20 @@ var queryUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey
 //console.log(queryUrl);
 axios.get(queryUrl).then(
   function(response) {
-      console.log("Title of the movie :" + response.data.Title);
-      console.log("Release Year: " + response.data.Year);
-      console.log("IMDB rating :" + response.data.imdbRating);
-      console.log("Rotton tomato rating: " + JSON.stringify(response.data.Ratings[1]));
-      console.log("Country: " + response.data.Country);
-      console.log("Language : " + response.data.Language);
-      console.log("Plot : " + response.data.Plot);
-      console.log("Actors :" + response.data.Actors);
+    var movieResult = `
+         Title of the movie:  ${response.data.Title}
+          Release Year:  ${response.data.Year}
+          IMDB rating :  ${response.data.imdbRating},
+          Rotton tomato rating: ${JSON.stringify(response.data.Ratings[1])},
+          Country: : ${response.data.Country},
+          Language :   ${response.data.Language},
+          Plot :   ${response.data.Plot},
+          Actors :  ${response.data.Actors}
+        `
+       console.log(movieResult);
 
       //THis code will add all search data in log.txt
-      fs.appendFile("log.txt",  userInput, function(err){
+      fs.appendFile("log.txt",  movieResult,  function(err){
           if(err){
               console.log(err);
           }
@@ -76,6 +79,7 @@ axios.get(queryUrl).then(
       console.log(error.config);
   });
 }
+
 function concertThis(){
     //If user doesn't pick any band name then it will display Pup.
     if(!userInput){
@@ -85,12 +89,15 @@ function concertThis(){
 
     axios.get(url).then(
         function(response){
-            console.log("Name of the venue is : " + response.data[0].venue.name);
-            console.log("Venue location : " + response.data[0].venue.city);
-            console.log("Date of the event is : " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
+            var concertResult = `
+                Name of the venue is : ${response.data[0].venue.name},
+                Venue location : ${response.data[0].venue.city},
+                Date of the event is : ${moment(response.data[0].datetime).format("MM/DD/YYYY")},
+              `      
+            console.log(concertResult);
 
             //This code will add all search data in log.txt
-            fs.appendFile("log.txt", userInput, function(err){
+            fs.appendFile("log.txt", concertResult, function(err){
                 if(err){
                     console.log(err);
                 }
@@ -131,13 +138,15 @@ spotify.search({ type: 'track', query: userInput }, function(err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-    console.log("Name of the Artist is :" + data.tracks.items[0].artists[0].name);
-    console.log("The song name: " + data.tracks.items[0].name);
-    console.log("A preview link of the song from Spotify :" + data.tracks.items[0].external_urls.spotify)
-    console.log("The album from the song is from: " + data.tracks.items[0].album.name);
-
+    var songResult = `
+    Name of the Artist is :${data.tracks.items[0].artists[0].name};
+    The song name: ${data.tracks.items[0].name};
+    A preview link of the song from Spotify : ${data.tracks.items[0].external_urls.spotify};
+    The album from the song is from: ${data.tracks.items[0].album.name};
+  `
+   console.log(songResult);
     //This code will add all search data in log.txt
-    fs.appendFile("log.txt", userInput , function(err){
+    fs.appendFile("log.txt", songResult , function(err){
         if(err){
             console.log(err);
         }
