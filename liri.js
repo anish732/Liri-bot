@@ -54,6 +54,16 @@ axios.get(queryUrl).then(
       console.log("Language : " + response.data.Language);
       console.log("Plot : " + response.data.Plot);
       console.log("Actors :" + response.data.Actors);
+
+      //THis code will add all search data in log.txt
+      fs.appendFile("log.txt",  userInput, function(err){
+          if(err){
+              console.log(err);
+          }
+          else{
+              console.log("Content added in log.txt!")
+          }
+      })
   })
   .catch(function(error){
       if (error.response){
@@ -78,6 +88,16 @@ function concertThis(){
             console.log("Name of the venue is : " + response.data[0].venue.name);
             console.log("Venue location : " + response.data[0].venue.city);
             console.log("Date of the event is : " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
+
+            //This code will add all search data in log.txt
+            fs.appendFile("log.txt", userInput, function(err){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    console.log("Content added in log.txt!")
+                }
+            })
         }
     ).catch(function(error){
         console.log("Something went wrong :" + (error.response))
@@ -115,6 +135,16 @@ spotify.search({ type: 'track', query: userInput }, function(err, data) {
     console.log("The song name: " + data.tracks.items[0].name);
     console.log("A preview link of the song from Spotify :" + data.tracks.items[0].external_urls.spotify)
     console.log("The album from the song is from: " + data.tracks.items[0].album.name);
+
+    //This code will add all search data in log.txt
+    fs.appendFile("log.txt", userInput , function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log("Content added in log.txt!")
+        }
+    })
   });
 }
 switchFunction();
